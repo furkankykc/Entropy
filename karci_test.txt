@@ -1,0 +1,21 @@
+
+KARCI
+entropy =  3.9998629864842368
+entropy =  2.0976143832190886
+entropy =  4.45919272200116
+
+DENG
+entropy =  7.667954329938377
+entropy =  7.38224004422409
+entropy =  7.845827543915023
+
+SHANNON
+entropy =  0.6792696431662097
+entropy =  0.3935553574519241
+entropy =  0.8571428571428571
+
+
+alfa büyüdükçe entropi azalır 0<i<0.2
+
+Alfa degerleri 0-1 arası verildiginde entropy degişimi düzenli artış veya azalış
+göstermektedir.
