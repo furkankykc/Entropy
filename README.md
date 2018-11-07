@@ -9,3 +9,5 @@ There are many modeling and expressions used in the scientific analysis of these
 Sosyal ağlardaki bu verilerin bilimsel olarak analiz edilmesinde kullanılmış birçok modelleme ve ifade şekli bulunmaktadır. Duygu analizi için çoğunlukla makine öğrenmesi yaklaşımları kullanılmaktadır. Makine öğrenme algoritması olarak Naive Bayes, Shannon Entropi, Karar Ağaçları, Destek Vektör Makineleri gibi yöntemler kullanılabilmektedir.
  
 Since the development of these techniques, many different methods have been introduced. These methods undoubtedly constitute the basis of this process. The accuracy, reliability and performance analysis of these methods are as important as finding these methods.
+
+![example](test-output/example.PNG)
