@@ -11,3 +11,9 @@ Sosyal ağlardaki bu verilerin bilimsel olarak analiz edilmesinde kullanılmış
 Since the development of these techniques, many different methods have been introduced. These methods undoubtedly constitute the basis of this process. The accuracy, reliability and performance analysis of these methods are as important as finding these methods.
 
 ![example](test-output/example.PNG)
+
+
+# Facts
+-Grapviz
+-Desicion Tree
+-Entropy
