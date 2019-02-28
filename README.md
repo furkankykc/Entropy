@@ -1,5 +1,4 @@
 # Entropy
-![example](test-output/picture.png)
 
 One of the most important preliminary information for data mining activities in social media is that social networks are closely related to big data. In other words, in social networks, there are problems such as the volume of data, velocity of data, variety of data and veracity of data. Data mining techniques include critical methods for large data studies, which can generate a variety of patterns, rules and trends from the data set and enable them to gain important information through these deductions. In general, these processes pass through the stages such as data preprocessing, data analysis and data interpretation.
  
@@ -18,3 +17,4 @@ Sosyal ağlardaki bu verilerin bilimsel olarak analiz edilmesinde kullanılmış
 -Grapviz
 -Desicion Tree
 -Entropy
+![example](test-output/picture.png)
