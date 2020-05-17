@@ -13,7 +13,6 @@ class Tree:
         self.arr = []
         self.next = None
         self.data = data
-        self.label = None
         self.id = None
 
     def __str__(self):
@@ -26,6 +25,21 @@ class Tree:
             for i in self.arr:
                 text += '\n' + '\t-' * a * 2 + '>' + str(i.data) + '[' + i.next.yazdir(a + 1) + ']'
         return text
+
+    def result(self, data):
+        temp = self
+        while (temp != None):
+            if len(self.arr) > 0:
+                t = None
+                for i in temp.arr:
+                    if data[temp.data] == i.data:
+                        t = i.next
+
+                result = temp.data
+                tn = temp
+                temp = t
+        if(len(tn.arr)==0):
+            print(result)
 
     # ağacı yazdırmak için kullanılacak fonksiyon
     def yaz(self):
@@ -40,7 +54,7 @@ class Tree:
                 dot.edge(str(self.id), str(i.id))
                 i.next.new_edge(i.id, dot)
         else:
-            dot.node(str(self.id), str(self.data), color='red')
+            dot.node(str(self.id), str(self.data), color='black')
             dot.edge(str(root_id), str(self.id))
 
     # ağacı çizdirmek için kenarlarının bağlantılarının özyinelemeli olarak belirlendiği fonksiyon
@@ -235,7 +249,7 @@ def deng(payToplam, paydaToplam, payOlma, paydaOlma):
 class entropy:
     func_list = ['karci', 'deng', 'shannon']
     func_id = 0
-
+    tree = None
     df = None
 
     def __init__(self, data, func_name, column_list=None, resultCol=''):
@@ -264,11 +278,17 @@ class entropy:
         else:
             raise EnvironmentError("not valid data_set, data_set type must be pandas dataframe")
 
+    def result(self, data):
+        if self.tree != None:
+            for index, row in data.iterrows():
+                self.tree.result(row)
+
     def calc(self):
         tree = Tree()
         entropyHesapla(self.df, tree, self.func_id)
-        tree.draw()
-        tree.yaz()
+        # tree.draw()
+        # tree.yaz()
+        self.tree = tree
 
     def prepare(self, colName: str):
         blueWins = self.df[[colName]]

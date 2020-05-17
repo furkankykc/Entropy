@@ -11,8 +11,14 @@ testDataManual = pd.np.array([['ORTA', 'YASLI', 'ERKEK', 'EVET'],
                               ['YUKSEK', 'YASLI', 'KADIN', 'EVET'],
                               ['ILK', 'GENC', 'KADIN', 'HAYIR']])
 
-# columns2 = ['EGITIM', 'YAS', 'CINSIYET', 'KABUL']
-# testDataManual = pd.DataFrame(testDataManual, columns=columns2)
+testManual = pd.np.array([['ORTA', 'YASLI', 'ERKEK'],['ILK', 'GENC', 'KADIN'],
+                              ])
+testCol = ['EGITIM', 'YAS', 'CINSIYET']
+testtData = pd.DataFrame(testManual, columns=testCol)
+
+
+columns2 = ['EGITIM', 'YAS', 'CINSIYET', 'KABUL']
+testDataManual = pd.DataFrame(testDataManual, columns=columns2)
 # data = 'Qualitative_Bankruptcy.data.csv'
 # cov19 = 'TimeAge.csv'
 # df = pd.DataFrame(np.array(pd.read_csv(data)))
@@ -26,8 +32,12 @@ data = 'Qualitative_Bankruptcy.data.csv'
 # # df.drop(columns=['blueWins'],inplace=True)
 # # df.insert(len(df.columns), 'blueWins', blueWins)
 # # print(df.head())
-entropy(data, 'karci',resultCol='').calc()
-
+e = entropy(testDataManual, 'karci',resultCol='KABUL',column_list=columns2)
+e.calc()
+e.result(testtData)
+# for index, row in testtData.iterrows():
+#
+#     print(row['YAS'])
 # rangei =100
 # rangej = 1
 # for i in range(0,rangei):
